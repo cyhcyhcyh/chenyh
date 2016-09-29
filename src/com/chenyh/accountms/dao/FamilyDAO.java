@@ -12,4 +12,9 @@ public class FamilyDAO {
 	{
 		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
 	}
+	
+	private void insert() {
+		// TODO Auto-generated method stub
+
+	}
 }
