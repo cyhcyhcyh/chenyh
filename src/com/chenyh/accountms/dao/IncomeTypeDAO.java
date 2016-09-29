@@ -10,4 +10,7 @@ public class IncomeTypeDAO {
 	{
 		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
 	}
+	public void  name() {
+		
+	}
 }
