@@ -24,9 +24,8 @@ public class FamilyDAO {
 	public void  insert(tb_Family tb_Family)
 	{
 		db=helper.getWritableDatabase();//≥ı ºªØSQLiteDatabase
-		String sql="insert into tb_Family(ID,Name,Depict) values(?,?,?)";
+		String sql="insert into tb_Family(Name,Depict) values(?,?)";
 		db.execSQL(sql, new Object[]{
-						tb_Family.getID(),
 						tb_Family.getName(),
 						tb_Family.getDepict()});
 		
