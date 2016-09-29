@@ -12,5 +12,4 @@ public class FamilyDAO {
 	{
 		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
 	}
-
 }
