@@ -25,7 +25,7 @@ public class IncomeInfoDAO {
 	public void insert(tb_IncomeInfo tb_IncomeInfo)
 	{
 		db=helper.getWritableDatabase();
-		String sql="insert into tb_IncomeInfo( ID, TypeID, Money, Time, payment, Depict) values(?,?,?,?,?,?,?)";//cfdhf
+		String sql="insert into tb_IncomeInfo( ID, TypeID, Money, Time, payment, Depict) values(?,?,?,?,?,?,?)";
 		db.execSQL(sql, new Object[]{
 				tb_IncomeInfo.getID(),
 				tb_IncomeInfo.getTypeID(),
