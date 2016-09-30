@@ -69,7 +69,7 @@ public class FamilyDAO {
 		 String sql=" select * from tb_Family";
 		 
 		 Cursor  cursor=db.rawQuery(sql,null);// 查找所有家庭成员信息，并存储到Cursor类中
-		 if(cursor.moveToNext())//遍历查找到的家庭成员信息
+		 while(cursor.moveToNext())//遍历查找到的家庭成员信息
 		 {
 			// 将遍历到的便签信息存储到tb_Family类中
 			 return new tb_Family(cursor.getInt(cursor.getColumnIndex("ID")),
