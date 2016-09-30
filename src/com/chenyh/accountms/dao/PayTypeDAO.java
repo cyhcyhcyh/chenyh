@@ -1,6 +1,7 @@
 package com.chenyh.accountms.dao;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import com.chenyh.accountms.db.DBOpenHelper;
 import com.chenyh.accountms.model.tb_PayType;
@@ -36,8 +37,30 @@ public class PayTypeDAO {
 				tb_PayType.getDepict()
 		} );
 	}
+	/**
+	 * 删除支出类别
+	 * @param tb_PayType
+	 */
 	public void delete(tb_PayType tb_PayType){
 		db=helper.getWritableDatabase();
-		String sql="delete ";
+		String sql="delete from tb_PayType where TypeID=?";
+		db.execSQL(sql, new Object[]{
+				tb_PayType.getTypeID()
+		});
+	}
+	/**
+	 * 查询支出类别信息
+	 * @param tb_PayType
+	 */
+	public void retrieve(tb_PayType tb_PayType){
+		db=helper.getWritableDatabase();
+		String sql="select * from tb_PayType";
+		Cursor cursor=db.rawQuery(sql, null);
+		   while(cursor.moveToNext()){  
+               String _TypeName = cursor.getString(cursor.getColumnIndex("TypeName"));  
+               String _Depict = cursor.getString(cursor.getColumnIndex("Depict"));   
+               tb_PayType.setTypeName(_TypeName);  
+               tb_PayType.setDepict(_Depict);  
+           } 
 	}
 }
