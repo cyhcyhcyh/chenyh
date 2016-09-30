@@ -2,6 +2,7 @@ package com.chenyh.accountms.dao;
 import com.chenyh.accountms.model.tb_User;
 import com.chenyh.accountms.db.*;
 
+import android.R.integer;
 import android.R.string;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,10 +16,20 @@ public class LoginDAO {
 		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
 	}
 	
-	public boolean UserInfo(tb_User tb_User)
+	public void UserInfo(tb_User tb_User)
 	{
 		db=helper.getWritableDatabase();
 		String sql="select count(*) from tb_User where UserName=? and Password=? ";
-		return true;
+		
+		db.execSQL(sql, new Object[]{
+						tb_User.getUserName(),
+						tb_User.getPassword()});
+//		if()
+//		{
+//			
+//		}
+//		else {
+//			
+//		}
 	}
 }
