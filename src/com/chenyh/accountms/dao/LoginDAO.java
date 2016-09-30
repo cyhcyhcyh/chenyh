@@ -16,6 +16,10 @@ public class LoginDAO {
 		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
 	}
 	
+	/**
+	 * 判断数据库里是否有这条数据
+	 * @param tb_User
+	 */
 	public void UserInfo(tb_User tb_User)
 	{
 		db=helper.getWritableDatabase();
