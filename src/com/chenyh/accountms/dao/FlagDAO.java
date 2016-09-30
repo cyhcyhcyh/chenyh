@@ -10,7 +10,7 @@ public class FlagDAO {
 
 	public FlagDAO(Context context)// 定义构造函数
 	{
-		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象
+		helper = new DBOpenHelper(context);// 初始化DBOpenHelper对象 hhhh
 	}
 	
 	
