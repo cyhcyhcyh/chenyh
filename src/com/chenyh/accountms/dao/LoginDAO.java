@@ -28,6 +28,7 @@ public class LoginDAO {
 		db.execSQL(sql, new Object[]{
 						tb_User.getUserName(),
 						tb_User.getPassword()});
+		db.close();
 //		if()
 //		{
 //			
