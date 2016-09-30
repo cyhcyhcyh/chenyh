@@ -22,6 +22,7 @@ public class UserDAO {
 				tb_User.getUserName(),
 				tb_User.getPassword(),
 				tb_User.getDepict()});
+		db.close();
 	};
 	/**
 	 * ĞŞ¸ÄÓÃ»§ÃÜÂë
